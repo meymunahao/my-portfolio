@@ -1,0 +1,297 @@
+/* =============================
+   MAIN STYLESHEET FOR PORTFOLIO WEBSITE
+   Technologies: PURE CSS
+   Purpose: Clean, readable, professional design
+   ============================= */
+
+/* -----------------------------
+   CSS RESET – removes browser default spacing
+   ----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----------------------------
+   ROOT VARIABLES – central color control
+   ----------------------------- */
+:root {
+  --primary: #0f172a;     /* dark navy blue */
+  --secondary: #2563eb;   /* blue for links/buttons */
+  --light: #f8fafc;       /* general page background */
+  --text: #111827;        /* normal text */
+  --muted: #6b7280;       /* lighter text */
+}
+
+/* -----------------------------
+   SUBTLE BACKGROUND ACCENTS
+   ----------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at top left,
+    rgba(37, 99, 235, 0.08),
+    transparent 40%
+  );
+  z-index: -1;
+}
+
+.section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+/* -----------------------------
+   GENERAL PAGE STYLES
+   ----------------------------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* -----------------------------
+   REUSABLE CONTAINER
+   ----------------------------- */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* -----------------------------
+   GENERAL SECTION SPACING
+   This improves readability and structure
+   ----------------------------- */
+.section {
+  padding: 4rem 0;
+}
+
+.section h1,
+.section h2 {
+  margin-bottom: 1rem;
+}
+
+.section p {
+  margin-bottom: 1rem;
+}
+
+/* -----------------------------
+   HEADER & NAVIGATION
+   ----------------------------- */
+header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem 0;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--secondary);
+}
+
+/* -----------------------------
+   HERO / ABOUT SECTION
+   ----------------------------- */
+.hero {
+  display: grid;
+  gap: 2rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  margin-top: 3rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+}
+
+.hero b {
+  color: var(--primary);
+}
+
+.hero p {
+  max-width: 700px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.15),
+    transparent 60%
+  );
+  border-radius: 16px;
+}
+
+.pulse-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--secondary);
+  opacity: 0.6;
+  position: absolute;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.pulse-circle.delay {
+  width: 180px;
+  height: 180px;
+  opacity: 0.3;
+  animation-delay: 1.2s;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0.6;
+  }
+}
+
+/* -----------------------------
+   PROJECTS SECTION
+   ----------------------------- */
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+
+  /* Added for interactivity */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.project-card h3 {
+  margin-top: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+}
+
+.stack {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* -----------------------------
+   CTA (CALL TO ACTION)
+   ----------------------------- */
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* -----------------------------
+   BUTTONS
+   ----------------------------- */
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.3rem;
+  text-decoration: none;
+  background: linear-gradient(
+    135deg,
+    var(--secondary),
+    #1d4ed8
+  );
+  color: white;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* -----------------------------
+   FOOTER
+   ----------------------------- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--muted);
+  margin-top: 5rem;
+}
+
+/* -----------------------------
+   RESPONSIVENESS
+   ----------------------------- */
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-animation {
+    height: 180px;
+  }
+}

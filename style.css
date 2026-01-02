@@ -70,17 +70,42 @@ body {
    GENERAL SECTION SPACING
    This improves readability and structure
    ----------------------------- */
+/* -----------------------------
+   GENERAL SECTION SPACING
+   ----------------------------- */
 .section {
-  padding: 4rem 0;
+  padding: 3.5rem 0;
+  position: relative;
+}
+
+.project-page .section {
+  padding: 2.75rem 0;
 }
 
 .section h1,
 .section h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.section h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
 }
 
 .section p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.section ul {
+  margin-top: 0.75rem;
+  padding-left: 1.25rem;
+}
+
+.section li {
+  margin-bottom: 0.7rem;
 }
 
 /* -----------------------------

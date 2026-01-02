@@ -1,32 +1,17 @@
-/* =============================
-   MAIN STYLESHEET FOR PORTFOLIO WEBSITE
-   Technologies: PURE CSS
-   Purpose: Clean, readable, professional design
-   ============================= */
-
-/* -----------------------------
-   CSS RESET – removes browser default spacing
-   ----------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* -----------------------------
-   ROOT VARIABLES – central color control
-   ----------------------------- */
 :root {
-  --primary: #0f172a;     /* dark navy blue */
-  --secondary: #2563eb;   /* blue for links/buttons */
-  --light: #f8fafc;       /* general page background */
-  --text: #111827;        /* normal text */
-  --muted: #1d1f23;       /* lighter text */
+  --primary: #0f172a;   
+  --secondary: #2563eb; 
+  --light: #f8fafc;     
+  --text: #111827;      
+  --muted: #1d1f23;      
 }
 
-/* -----------------------------
-   SUBTLE BACKGROUND ACCENTS
-   ----------------------------- */
 body::before {
   content: "";
   position: fixed;
@@ -47,9 +32,7 @@ body::before {
 section {
   scroll-margin-top: 120px;
 }
-/* -----------------------------
-   GENERAL PAGE STYLES
-   ----------------------------- */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: var(--light);
@@ -57,22 +40,12 @@ body {
   line-height: 1.7;
 }
 
-/* -----------------------------
-   REUSABLE CONTAINER
-   ----------------------------- */
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
 }
 
-/* -----------------------------
-   GENERAL SECTION SPACING
-   This improves readability and structure
-   ----------------------------- */
-/* -----------------------------
-   GENERAL SECTION SPACING
-   ----------------------------- */
 .section {
   padding: 3.5rem 0;
   position: relative;
@@ -108,9 +81,6 @@ body {
   margin-bottom: 0.7rem;
 }
 
-/* -----------------------------
-   HEADER & NAVIGATION
-   ----------------------------- */
 header {
   background: white;
   border-bottom: 1px solid #e5e7eb;
@@ -143,9 +113,6 @@ nav {
   color: var(--secondary);
 }
 
-/* -----------------------------
-   HERO / ABOUT SECTION
-   ----------------------------- */
 .hero {
   display: grid;
   gap: 2rem;
@@ -221,9 +188,6 @@ nav {
   }
 }
 
-/* -----------------------------
-   PROJECTS SECTION
-   ----------------------------- */
 .project-card {
   background: white;
   padding: 1.5rem;
@@ -233,7 +197,6 @@ nav {
   flex-direction: column;
   gap: 0.7rem;
 
-  /* Added for interactivity */
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .project-card:hover {
@@ -260,9 +223,6 @@ nav {
   color: var(--muted);
 }
 
-/* -----------------------------
-   CTA (CALL TO ACTION)
-   ----------------------------- */
 .cta {
   text-align: center;
   padding: 3rem 1rem;
@@ -271,9 +231,6 @@ nav {
   border: 1px solid #e5e7eb;
 }
 
-/* -----------------------------
-   BUTTONS
-   ----------------------------- */
 .btn {
   display: inline-block;
   padding: 0.65rem 1.3rem;
@@ -295,9 +252,6 @@ nav {
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
 }
 
-/* -----------------------------
-   FOOTER
-   ----------------------------- */
 footer {
   text-align: center;
   padding: 2rem 0;
@@ -305,9 +259,6 @@ footer {
   margin-top: 5rem;
 }
 
-/* -----------------------------
-   RESPONSIVENESS
-   ----------------------------- */
 @media (min-width: 768px) {
   .hero {
     grid-template-columns: 1fr 1fr;
